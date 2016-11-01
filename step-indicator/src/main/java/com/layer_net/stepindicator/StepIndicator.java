@@ -51,6 +51,7 @@ public class StepIndicator extends View {
 
     private int radius;
     private int strokeWidth;
+	private int lineWidth;
     private int currentStepPosition;
     private int stepsCount = 1;
     private int backgroundColor;
@@ -117,7 +118,7 @@ public class StepIndicator extends View {
         pText = new Paint();
         paint.setColor(stepColor);
         paint.setFlags(Paint.ANTI_ALIAS_FLAG);
-        paint.setStrokeWidth(radius * 80 / 100);
+        paint.setStrokeWidth(lineWidth);
         pStoke.setColor(stepColor);
         pStoke.setStrokeWidth(strokeWidth);
         pStoke.setStyle(Paint.Style.STROKE);
@@ -143,6 +144,7 @@ public class StepIndicator extends View {
         try {
             radius = (int) attr.getDimension(R.styleable.StepIndicator_siRadius, dp2px(DEFAULT_STEP_RADIUS));
             strokeWidth = (int) attr.getDimension(R.styleable.StepIndicator_siStrokeWidth, dp2px(DEFAULT_STOKE_WIDTH));
+			lineWidth = (int) attr.getDimension(R.styleable.StepIndicator_siLineWidth, radius * 80 / 100);
             stepsCount = attr.getInt(R.styleable.StepIndicator_siStepCount, DEFAULT_STEP_COUNT);
             stepColor = attr.getColor(R.styleable.StepIndicator_siStepColor, ContextCompat.getColor(context, DEFAULT_STEP_COLOR));
             currentColor = attr.getColor(R.styleable.StepIndicator_siCurrentStepColor, ContextCompat.getColor(context, DEFAULT_CURRENT_STEP_COLOR));

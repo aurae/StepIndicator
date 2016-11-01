@@ -44,10 +44,11 @@ Interactive step paging indicator widget, compatible with the ViewPager
  * `siStepColor` Color of the step indicator
  * `siCurrentStepColor` Color of the current step
  * `siBackgroundColor` Background color of the step indicator
- * `siTextColor` Background color of the step indicator
- * `siSecondaryTextColor` Background color of the step indicator
+ * `siTextColor` Text color of the step indicator
+ * `siSecondaryTextColor` Secondary text color of the step indicator
  * `siRadius` Radius of the step indicator
  * `siStrokeWidth` Stroke Width of a current step
+ * `siLineWidth` Width of the lines in-between steps
  * `siStepCount` Size of step (With out ViewPager)
 
 # Download
